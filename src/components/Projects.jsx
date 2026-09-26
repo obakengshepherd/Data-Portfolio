@@ -11,7 +11,7 @@ function Projects() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
+            <article className="project-card" key={project.slug}>
               <div
                 className={`project-visual project-${project.accent}`}
                 aria-hidden="true"
@@ -22,7 +22,7 @@ function Projects() {
                 <span className="badge">Case Study</span>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a href="#" className="text-link">
+                <a href={`/projects/${project.slug}`} className="text-link">
                   View Case Study
                 </a>
               </div>

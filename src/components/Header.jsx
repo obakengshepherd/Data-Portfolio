@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { profile } from "../data/portfolioData";
 
-function Header() {
+function Header({ isCaseStudy = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function closeMenu() {
@@ -14,7 +14,7 @@ function Header() {
       <div className="container nav-wrap">
         <a
           className="brand"
-          href="#top"
+          href={isCaseStudy ? "/#top" : "#top"}
           aria-label="Obakeng Shepherd Tsaagane homepage"
         >
           <span className="brand-mark">OST</span>
@@ -42,30 +42,32 @@ function Header() {
           id="main-navigation"
           aria-label="Main navigation"
         >
-          <a href="#about" onClick={closeMenu}>
+          <a href={isCaseStudy ? "/#about" : "#about"} onClick={closeMenu}>
             About
           </a>
-          <a href="#experience" onClick={closeMenu}>
+          <a href={isCaseStudy ? "/#experience" : "#experience"} onClick={closeMenu}>
             Experience
           </a>
-          <a href="#projects" onClick={closeMenu}>
+          <a href={isCaseStudy ? "/#projects" : "#projects"} onClick={closeMenu}>
             Projects
           </a>
-          <a href="#pricing" onClick={closeMenu}>
+          <a href={isCaseStudy ? "/#pricing" : "#pricing"} onClick={closeMenu}>
             Pricing
           </a>
-          <a href="#contact" onClick={closeMenu}>
+          <a href={isCaseStudy ? "/#contact" : "#contact"} onClick={closeMenu}>
             Contact
           </a>
-          <a
-            className="button button-small button-ghost menu-resume"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            onClick={closeMenu}
-          >
-            Resume
-          </a>
+          {!isCaseStudy && (
+            <a
+              className="button button-small button-ghost menu-resume"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+            >
+              Resume
+            </a>
+          )}
         </nav>
       </div>
     </header>

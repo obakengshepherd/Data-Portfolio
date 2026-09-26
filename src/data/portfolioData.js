@@ -60,28 +60,80 @@ export const skillGroups = [
 
 export const projects = [
   {
+    slug: "customer-experience-insights",
     title: "Customer Experience Insights",
+    category: "Customer analytics",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     accent: "blue",
+    caseStudy: {
+      context:
+        "A placeholder study exploring how customer feedback and service interactions can be organized into a clearer view of the end-to-end experience.",
+      challenge:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The analysis begins by defining the experience question, identifying useful customer signals, and separating recurring friction from isolated feedback.",
+      approach:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Segment the available feedback by journey stage, compare patterns across customer groups, and validate findings against service and operational indicators.",
+      outcome:
+        "Illustrative placeholder: a prioritized set of customer pain points, supporting evidence, and opportunities for follow-up research or service improvement.",
+      tools: ["Customer feedback", "Journey analysis", "Segmentation", "Insight reporting"],
+    },
   },
   {
+    slug: "operational-performance-dashboard",
     title: "Operational Performance Dashboard",
+    category: "Operations & reporting",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     accent: "teal",
+    caseStudy: {
+      context:
+        "A placeholder dashboard project focused on making operational performance easier to monitor and discuss across teams.",
+      challenge:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Performance measures can be spread across reports, use inconsistent definitions, or arrive too late to guide routine decisions.",
+      approach:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Define a concise KPI set, establish consistent time periods and comparisons, then structure the reporting view around the decisions stakeholders need to make.",
+      outcome:
+        "Illustrative placeholder: a shared performance view with clearer trends, exceptions, and prompts for operational follow-up.",
+      tools: ["KPI design", "Performance tracking", "Dashboard layout", "Stakeholder reporting"],
+    },
   },
   {
+    slug: "risk-and-trend-review",
     title: "Risk and Trend Review",
+    category: "Risk & trend analysis",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     accent: "navy",
+    caseStudy: {
+      context:
+        "A placeholder analytical review for examining changes in risk indicators and identifying patterns that may need closer attention.",
+      challenge:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A single-period snapshot can hide meaningful movement, while noisy variation can be mistaken for a lasting signal.",
+      approach:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Check data consistency, compare indicators over time, investigate unusual movements, and document assumptions before interpreting the trends.",
+      outcome:
+        "Illustrative placeholder: a concise trend summary that distinguishes observed movement from areas requiring further validation.",
+      tools: ["Trend review", "Data validation", "Comparative analysis", "Risk indicators"],
+    },
   },
   {
+    slug: "process-improvement-analysis",
     title: "Process Improvement Analysis",
+    category: "Process improvement",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     accent: "slate",
+    caseStudy: {
+      context:
+        "A placeholder process study examining where operational effort, delays, or repeat work may be affecting outcomes.",
+      challenge:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Process steps may be understood differently across teams, making bottlenecks and hand-offs difficult to compare consistently.",
+      approach:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Map the process stages, profile available volume and timing data, and compare patterns to identify candidate areas for deeper investigation.",
+      outcome:
+        "Illustrative placeholder: an evidence-led shortlist of improvement opportunities with practical measures for tracking future change.",
+      tools: ["Process mapping", "Operational analysis", "Root-cause review", "Recommendations"],
+    },
   },
 ];
 
