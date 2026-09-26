@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Globe, BriefcaseBusiness, Mail, Phone } from "lucide-react";
 
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 const initialState = {
   name: "",
@@ -24,6 +24,21 @@ function ContactForm() {
     event.preventDefault();
     setIsSubmitting(true);
     setStatus({ type: "idle", message: "" });
+
+    if (
+      !WEB3FORMS_ACCESS_KEY ||
+      !/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(
+        WEB3FORMS_ACCESS_KEY,
+      )
+    ) {
+      setStatus({
+        type: "error",
+        message:
+          "Web3Forms access key is missing or invalid. Add VITE_WEB3FORMS_ACCESS_KEY to .env.local.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
