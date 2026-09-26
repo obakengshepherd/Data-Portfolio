@@ -75,7 +75,12 @@ export const projects = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Segment the available feedback by journey stage, compare patterns across customer groups, and validate findings against service and operational indicators.",
       outcome:
         "Illustrative placeholder: a prioritized set of customer pain points, supporting evidence, and opportunities for follow-up research or service improvement.",
-      tools: ["Customer feedback", "Journey analysis", "Segmentation", "Insight reporting"],
+      tools: [
+        "Customer feedback",
+        "Journey analysis",
+        "Segmentation",
+        "Insight reporting",
+      ],
     },
   },
   {
@@ -94,7 +99,12 @@ export const projects = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Define a concise KPI set, establish consistent time periods and comparisons, then structure the reporting view around the decisions stakeholders need to make.",
       outcome:
         "Illustrative placeholder: a shared performance view with clearer trends, exceptions, and prompts for operational follow-up.",
-      tools: ["KPI design", "Performance tracking", "Dashboard layout", "Stakeholder reporting"],
+      tools: [
+        "KPI design",
+        "Performance tracking",
+        "Dashboard layout",
+        "Stakeholder reporting",
+      ],
     },
   },
   {
@@ -113,7 +123,12 @@ export const projects = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Check data consistency, compare indicators over time, investigate unusual movements, and document assumptions before interpreting the trends.",
       outcome:
         "Illustrative placeholder: a concise trend summary that distinguishes observed movement from areas requiring further validation.",
-      tools: ["Trend review", "Data validation", "Comparative analysis", "Risk indicators"],
+      tools: [
+        "Trend review",
+        "Data validation",
+        "Comparative analysis",
+        "Risk indicators",
+      ],
     },
   },
   {
@@ -132,7 +147,12 @@ export const projects = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Map the process stages, profile available volume and timing data, and compare patterns to identify candidate areas for deeper investigation.",
       outcome:
         "Illustrative placeholder: an evidence-led shortlist of improvement opportunities with practical measures for tracking future change.",
-      tools: ["Process mapping", "Operational analysis", "Root-cause review", "Recommendations"],
+      tools: [
+        "Process mapping",
+        "Operational analysis",
+        "Root-cause review",
+        "Recommendations",
+      ],
     },
   },
 ];

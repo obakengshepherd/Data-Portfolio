@@ -40,9 +40,15 @@ function ProjectCaseStudy({ project }) {
             <span>{project.category}</span>
           </div>
           <div className="case-study-meta">
-            <span>Format <strong>Project preview</strong></span>
-            <span>Focus <strong>{project.category}</strong></span>
-            <span>Status <strong>Placeholder content</strong></span>
+            <span>
+              Format <strong>Project preview</strong>
+            </span>
+            <span>
+              Focus <strong>{project.category}</strong>
+            </span>
+            <span>
+              Status <strong>Placeholder content</strong>
+            </span>
           </div>
         </div>
       </section>

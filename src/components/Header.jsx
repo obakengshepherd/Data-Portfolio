@@ -45,10 +45,16 @@ function Header({ isCaseStudy = false }) {
           <a href={isCaseStudy ? "/#about" : "#about"} onClick={closeMenu}>
             About
           </a>
-          <a href={isCaseStudy ? "/#experience" : "#experience"} onClick={closeMenu}>
+          <a
+            href={isCaseStudy ? "/#experience" : "#experience"}
+            onClick={closeMenu}
+          >
             Experience
           </a>
-          <a href={isCaseStudy ? "/#projects" : "#projects"} onClick={closeMenu}>
+          <a
+            href={isCaseStudy ? "/#projects" : "#projects"}
+            onClick={closeMenu}
+          >
             Projects
           </a>
           <a href={isCaseStudy ? "/#pricing" : "#pricing"} onClick={closeMenu}>

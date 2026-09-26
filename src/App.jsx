@@ -12,7 +12,9 @@ import { projects } from "./data/portfolioData";
 import "./App.css";
 
 function App() {
-  const projectRoute = window.location.pathname.match(/^\/projects\/([^/]+)\/?$/);
+  const projectRoute = window.location.pathname.match(
+    /^\/projects\/([^/]+)\/?$/,
+  );
   const project = projectRoute
     ? projects.find((item) => item.slug === projectRoute[1])
     : null;
