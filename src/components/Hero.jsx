@@ -1,3 +1,4 @@
+import { ArrowRight, Download, MessageSquareText } from "lucide-react";
 import { heroStats, profile } from "../data/portfolioData";
 
 function Hero() {
@@ -18,7 +19,8 @@ function Hero() {
 
           <div className="cta-row">
             <a className="button" href="#projects">
-              View Projects
+              <span>View Projects</span>
+              <ArrowRight size={18} strokeWidth={2.25} />
             </a>
             <a
               className="button button-secondary"
@@ -26,10 +28,12 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              Download Resume
+              <Download size={18} strokeWidth={2.25} />
+              <span>Download Resume</span>
             </a>
             <a className="button button-ghost" href="#contact">
-              Contact
+              <MessageSquareText size={18} strokeWidth={2.25} />
+              <span>Contact</span>
             </a>
           </div>
         </div>

@@ -84,3 +84,75 @@ export const projects = [
     accent: "slate",
   },
 ];
+
+export const experience = [
+  {
+    period: "Current role",
+    role: "Data Analytics Intern – Research & Insight",
+    company: "FNB",
+    summary:
+      "Supporting the research and insight function with data exploration, trend analysis, reporting, and decision-support work for operational and customer-facing questions.",
+    achievements: [
+      "Built and refined analytical views that helped convert raw operational and customer data into clear business-ready insights.",
+      "Worked across reporting and analysis tasks to identify patterns, measure performance, and support stakeholder decision-making.",
+      "Strengthened data quality checks and interpretation routines to improve accuracy and confidence in reporting outputs.",
+    ],
+  },
+  {
+    period: "Core focus",
+    role: "Decision support and insight generation",
+    company: "Research & Insight",
+    summary:
+      "Turning fragmented business signals into practical recommendations through structured investigation, stakeholder communication, and repeatable analytics practice.",
+    achievements: [
+      "Translated complex datasets into concise narratives that made operational issues easier to understand and prioritize.",
+      "Combined business context with analytical thinking to uncover root causes and highlight opportunities for improvement.",
+      "Supported performance discussions with evidence-based commentary that helped teams focus on observable trends and drivers.",
+    ],
+  },
+];
+
+export const pricingPlans = [
+  {
+    tier: "Starter insight sprint",
+    label: "Small business / founder",
+    price: "From R2,500",
+    description:
+      "A focused analytics sprint for founders, solo operators, and small teams who need a quick, high-signal answer to a business question.",
+    features: [
+      "One-issue deep dive",
+      "Data cleaning and validation",
+      "Dashboard or report summary",
+      "Actionable recommendation memo",
+    ],
+    accent: "gold",
+  },
+  {
+    tier: "Growth analytics retainer",
+    label: "Serious business support",
+    price: "From R6,500 / month",
+    description:
+      "Ongoing insight support for teams that need consistent reporting, performance monitoring, and commercial decision support.",
+    features: [
+      "Monthly dashboard review",
+      "Operational tracking and KPI summaries",
+      "Stakeholder-ready reporting",
+      "Priority request handling",
+    ],
+    accent: "blue",
+  },
+  {
+    tier: "Commercial decision project",
+    label: "Strategy & transformation",
+    price: "From R12,000",
+    description:
+      "A structured analysis engagement for businesses dealing with customer signals, operational complexity, or strategy-level decision pressure.",
+    features: [
+      "Problem framing and scope design",
+      "Research-led analysis",
+      "Executive-ready insight pack",
+      "Implementation recommendations",
+    ],
+    accent: "teal",
+  },
+];

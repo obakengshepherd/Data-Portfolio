@@ -1,3 +1,4 @@
+import { Globe, BriefcaseBusiness, Mail, FileText } from "lucide-react";
 import { profile } from "../data/portfolioData";
 
 function Footer() {
@@ -7,18 +8,24 @@ function Footer() {
         <div>
           <p className="footer-name">{profile.name}</p>
           <p className="footer-title">{profile.title}</p>
-          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          <a href={`mailto:${profile.email}`} className="footer-mail-link">
+            <Mail size={15} strokeWidth={2} />
+            <span>{profile.email}</span>
+          </a>
         </div>
 
         <div className="footer-links">
           <a href={profile.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
+            <BriefcaseBusiness size={16} strokeWidth={2} />
+            <span>LinkedIn</span>
           </a>
           <a href={profile.github} target="_blank" rel="noreferrer">
-            GitHub
+            <Globe size={16} strokeWidth={2} />
+            <span>GitHub</span>
           </a>
           <a href="/resume.pdf" target="_blank" rel="noreferrer">
-            Resume
+            <FileText size={16} strokeWidth={2} />
+            <span>Resume</span>
           </a>
         </div>
       </div>

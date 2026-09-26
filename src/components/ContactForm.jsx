@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Globe, BriefcaseBusiness, Mail, Phone } from "lucide-react";
 
 const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
 
@@ -81,22 +82,28 @@ function ContactForm() {
 
           <div className="contact-methods">
             <a href={`mailto:${"obaketsaagane@gmail.com"}`}>
-              obaketsaagane@gmail.com
+              <Mail size={16} strokeWidth={2} />
+              <span>obaketsaagane@gmail.com</span>
             </a>
-            <a href="tel:+27676308354">067 630 8354</a>
+            <a href="tel:+27676308354">
+              <Phone size={16} strokeWidth={2} />
+              <span>067 630 8354</span>
+            </a>
             <a
               href="https://www.linkedin.com/in/obakeng-tsaagane-307544244/"
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn
+              <BriefcaseBusiness size={16} strokeWidth={2} />
+              <span>LinkedIn</span>
             </a>
             <a
               href="https://github.com/obakengshepherd"
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
+              <Globe size={16} strokeWidth={2} />
+              <span>GitHub</span>
             </a>
           </div>
         </div>
