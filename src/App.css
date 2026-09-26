@@ -62,8 +62,8 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.8rem;
-  background: linear-gradient(135deg, var(--emerald-soft), var(--emerald));
-  color: #062c1f;
+  background: rgba(131, 171, 216, 0.74);
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -84,6 +84,7 @@
 .main-nav a:hover,
 .main-nav a:focus-visible {
   color: var(--text);
+  text-decoration: underline;
 }
 
 .button {
@@ -92,15 +93,15 @@
   justify-content: center;
   border: none;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--emerald-soft), var(--emerald));
-  color: #062c1f;
+  background: rgba(131, 171, 216, 0.74);
+  color: #06282c;
   font-weight: 700;
   text-decoration: none;
   padding: 0.95rem 1.5rem;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-  box-shadow: 0 12px 25px rgba(16, 185, 129, 0.14);
+  box-shadow: 0 12px 25px rgba(131, 171, 216, 0.74);
 }
 
 .button:hover,
@@ -132,8 +133,7 @@
   background:
     radial-gradient(
       circle at top left,
-      rgba(16, 185, 129, 0.12),
-      transparent 35%
+      rgba(131, 171, 216, 0.74) transparent 35%
     ),
     linear-gradient(
       180deg,
@@ -154,7 +154,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--emerald-deep);
+  color: var(--muted);
   font-weight: 700;
 }
 
@@ -209,11 +209,7 @@
   width: 4rem;
   height: 4rem;
   border-radius: 1rem;
-  background: linear-gradient(
-    135deg,
-    rgba(16, 185, 129, 0.15),
-    rgba(110, 231, 183, 0.16)
-  );
+  background: linear-gradient(135deg, rgba(131, 171, 216, 0.74));
   color: var(--text);
   font-size: 1.15rem;
   font-weight: 800;
@@ -344,7 +340,8 @@
 }
 
 .contact-inline a {
-  color: var(--emerald-deep);
+  color: var(--muted);
+  text-decoration: underline;
 }
 
 .projects-section {
@@ -419,9 +416,9 @@
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  background: rgba(16, 185, 129, 0.08);
-  color: var(--emerald-deep);
+  border: 1px solid rgba(16, 160, 185, 0.2);
+  background: rgba(58, 169, 221, 0.08);
+  color: var(--muted);
   padding: 0.38rem 0.7rem;
   font-size: 0.7rem;
   font-weight: 700;
@@ -441,7 +438,7 @@
 }
 
 .text-link {
-  color: var(--emerald-deep);
+  color: var(--muted);
   font-weight: 700;
 }
 
@@ -478,10 +475,10 @@
 }
 
 .skill-card li::before {
-  content: "•";
+  content: "-";
   position: absolute;
   left: 0;
-  color: var(--emerald);
+  color: var(--muted);
 }
 
 .skill-card-header {
@@ -499,7 +496,7 @@
   height: 2.3rem;
   border-radius: 0.7rem;
   background: rgba(16, 185, 129, 0.08);
-  color: var(--emerald-deep);
+  color: var(--muted);
 }
 
 .skill-icon svg {
@@ -554,7 +551,7 @@
 .footer-mail-link:hover,
 .footer-links a:hover,
 .contact-methods a:hover {
-  color: var(--emerald-deep);
+  color: var(--silver);
 }
 
 .footer-bottom {
