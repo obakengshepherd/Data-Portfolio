@@ -63,7 +63,6 @@ body,
 }
 
 body {
-  min-width: 320px;
   min-height: 100vh;
   background:
     radial-gradient(circle at top, rgba(191, 207, 226, 0.74), transparent 34%),
@@ -712,53 +711,6 @@ main {
   font-size: 0.82rem;
 }
 
-@media (max-width: 900px) {
-  .hero-grid,
-  .about-grid,
-  .contact-grid,
-  .projects-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .hero-section {
-    padding-top: 3rem;
-  }
-}
-
-@media (max-width: 520px) {
-  .content-section {
-    padding: 4rem 0;
-  }
-
-  .field-row {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .button,
-  .button-secondary,
-  .button-ghost {
-    width: 100%;
-  }
-
-  .nav-wrap {
-    min-height: 72px;
-  }
-
-  .brand small {
-    display: none;
-  }
-}
-
 .experience-list {
   display: grid;
   gap: 1.5rem;
@@ -960,10 +912,4 @@ main {
 .pricing-card .button {
   width: fit-content;
   margin-top: auto;
-}
-
-@media (max-width: 900px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
 }

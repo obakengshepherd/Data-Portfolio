@@ -1,6 +1,14 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { profile } from "../data/portfolioData";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
   return (
     <header className="site-header">
       <div className="container nav-wrap">
@@ -16,22 +24,49 @@ function Header() {
           </span>
         </a>
 
-        <nav className="main-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <a
-          className="button button-small button-ghost"
-          href="/resume.pdf"
-          target="_blank"
-          rel="noreferrer"
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
         >
-          Resume
-        </a>
+          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        <nav
+          className={`main-nav${isMenuOpen ? " is-open" : ""}`}
+          id="main-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="#about" onClick={closeMenu}>
+            About
+          </a>
+          <a href="#experience" onClick={closeMenu}>
+            Experience
+          </a>
+          <a href="#projects" onClick={closeMenu}>
+            Projects
+          </a>
+          <a href="#pricing" onClick={closeMenu}>
+            Pricing
+          </a>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
+          <a
+            className="button button-small button-ghost menu-resume"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            onClick={closeMenu}
+          >
+            Resume
+          </a>
+        </nav>
       </div>
     </header>
   );

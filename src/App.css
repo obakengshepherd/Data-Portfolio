@@ -25,6 +25,7 @@
 }
 
 .nav-wrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,25 +71,67 @@
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 2rem;
+  z-index: 21;
+  display: none;
+  width: min(20rem, calc(100vw - 2rem));
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow);
+}
+
+.main-nav.is-open {
+  display: grid;
+  gap: 0.2rem;
 }
 
 .main-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.65rem;
   font-size: 0.92rem;
   color: var(--muted);
-  transition: color 0.2s ease;
-  text-decoration: underline transparent; /* Hidden by default */
   transition:
-    text-decoration-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
+  text-decoration: underline transparent; /* Hidden by default */
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
+  background: rgba(15, 23, 42, 0.05);
   color: var(--text);
   text-decoration-color: var(--text); /* Smoothly fades in */
+}
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.menu-resume {
+  justify-content: center;
+  margin-top: 0.25rem;
 }
 
 .button {
@@ -533,6 +576,10 @@
 .contact-methods a {
   color: var(--text-soft);
   text-decoration: none;
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
 }
 
 .footer-mail-link,
@@ -563,50 +610,257 @@
   color: var(--muted);
 }
 
-@media (max-width: 900px) {
-  .hero-grid,
-  .about-grid,
-  .contact-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
+.footer-grid {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.footer-links {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.footer-links a,
+.footer-mail-link,
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 0;
+  padding-block: 0.6rem;
+}
+
+.main-nav {
+  flex-wrap: nowrap;
+}
+
+.main-nav a {
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+}
+
+.hero-grid,
+.about-grid,
+.projects-grid,
+.skills-grid,
+.contact-grid,
+.pricing-grid,
+.field-row {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.stats-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.15rem, 9vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.value-proposition {
+  font-size: clamp(1rem, 4vw, 1.15rem);
+}
+
+.section-heading h2,
+.contact-copy h2 {
+  font-size: clamp(1.85rem, 8vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.project-body h3 {
+  font-size: clamp(1.2rem, 5vw, 1.45rem);
+}
+
+.button {
+  min-height: 48px;
+}
+
+.button-small,
+.main-nav a,
+.contact-methods a,
+.text-link,
+.footer-links a,
+.footer-mail-link {
+  min-height: 44px;
+}
+
+.pricing-card .button,
+.cta-row .button {
+  width: 100%;
+}
+
+.cta-row {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.contact-form {
+  padding: clamp(1rem, 4vw, 1.5rem);
+}
+
+.contact-form input,
+.contact-form textarea {
+  min-height: 48px;
+}
+
+.contact-form textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.contact-methods a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-methods a span {
+  min-width: 0;
+}
+
+.experience-topline {
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+@media (max-width: 639px) {
+  .brand {
+    min-width: 0;
+    gap: 0.5rem;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .brand > span:last-child {
+    min-width: 0;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .brand strong {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .menu-toggle {
+    flex: 0 0 48px;
   }
 }
 
-@media (max-width: 640px) {
-  .nav-wrap,
-  .footer-grid {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+section[id] {
+  scroll-margin-top: 10rem;
+}
 
-  .main-nav {
-    flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-  }
-
-  .field-row,
+@media (min-width: 640px) {
+  .projects-grid,
+  .skills-grid,
+  .pricing-grid,
   .stats-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .field-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .cta-row {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
   }
 
-  .button,
-  .button-small,
-  .button-secondary,
-  .button-ghost {
-    width: 100%;
+  .cta-row .button {
+    width: auto;
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav,
+  .main-nav.is-open {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.35rem, 1vw, 1rem);
+    width: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .main-nav a {
+    min-height: 44px;
+    padding: 0.55rem clamp(0.35rem, 0.7vw, 0.7rem);
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+
+  .main-nav .menu-resume {
+    margin: 0;
+    padding-inline: 1rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .content-section {
+    padding-block: 5rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.7rem, 5vw, 4.6rem);
+    letter-spacing: -0.06em;
+  }
+
+  .section-heading h2,
+  .contact-copy h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .pricing-card .button {
+    width: fit-content;
+  }
+
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
