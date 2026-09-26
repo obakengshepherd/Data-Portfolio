@@ -79,12 +79,16 @@
   font-size: 0.92rem;
   color: var(--muted);
   transition: color 0.2s ease;
+  text-decoration: underline transparent; /* Hidden by default */
+  transition:
+    text-decoration-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
   color: var(--text);
-  text-decoration: underline;
+  text-decoration-color: var(--text); /* Smoothly fades in */
 }
 
 .button {
@@ -202,18 +206,17 @@
   border-bottom: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-.profile-avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
+.profile-photo {
+  display: block;
+  flex: 0 0 auto;
+  width: 6.5rem;
+  height: 8rem;
   border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(131, 171, 216, 0.74));
-  color: var(--text);
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  object-fit: cover;
+}
+
+.profile-card > div:last-child {
+  min-width: 0;
 }
 
 .profile-label {

@@ -1,5 +1,6 @@
 import { ArrowRight, Download, MessageSquareText } from "lucide-react";
 import { heroStats, profile } from "../data/portfolioData";
+import profilePhoto from "../assets/pro pic.jpeg";
 
 function Hero() {
   return (
@@ -40,7 +41,11 @@ function Hero() {
 
         <aside className="hero-panel" aria-label="Profile summary">
           <div className="profile-card">
-            <div className="profile-avatar">OST</div>
+            <img
+              className="profile-photo"
+              src={profilePhoto}
+              alt={profile.name}
+            />
             <div>
               <p className="profile-label">Profile</p>
               <h2>{profile.name}</h2>

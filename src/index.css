@@ -348,21 +348,13 @@ main {
   border-bottom: 1px solid var(--line);
 }
 
-.profile-avatar {
-  display: grid;
-  place-items: center;
-  width: 4rem;
-  height: 4rem;
+.profile-photo {
+  display: block;
+  flex: 0 0 auto;
+  width: 6.5rem;
+  height: 8rem;
   border-radius: 1.15rem;
-  background: linear-gradient(
-    135deg,
-    rgba(201, 168, 109, 0.18),
-    rgba(134, 184, 255, 0.12)
-  );
-  border: 1px solid rgba(201, 168, 109, 0.28);
-  color: var(--gold-soft);
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  object-fit: cover;
 }
 
 .profile-label {
